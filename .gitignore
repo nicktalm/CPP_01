@@ -1,0 +1,5 @@
+.vscode
+*.o
+brainz
+MoarBrainz
+.DS_Store
