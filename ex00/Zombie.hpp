@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:46:08 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/10 16:46:10 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/11 11:56:18 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Zombie
 {
 private:
-	std::string	_name;
+	std::string	name;
 public:
 	Zombie(std::string name);
 	~Zombie();
