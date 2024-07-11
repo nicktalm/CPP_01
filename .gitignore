@@ -2,4 +2,5 @@
 *.o
 brainz
 MoarBrainz
+BRAIN
 .DS_Store
