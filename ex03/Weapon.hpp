@@ -6,14 +6,14 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 15:59:51 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 11:03:44 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/16 16:51:21 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
-#define WEAPON_HPP
+# define WEAPON_HPP
 
-#include <string>
+# include <string>
 
 class Weapon {
 private:
