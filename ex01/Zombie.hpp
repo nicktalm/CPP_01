@@ -6,11 +6,11 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:43:41 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/11 13:00:24 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/19 11:07:52 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ZOMBIE_HPP
+#ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
 # include <iostream>
@@ -28,4 +28,4 @@ public:
 	int		index;
 };
 
-# endif
+#endif
