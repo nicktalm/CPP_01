@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 15:59:51 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 16:51:21 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/24 16:28:54 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 # include <string>
 
 class Weapon {
-private:
-	std::string type;
-public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string &getType() const;
-	void setType(std::string type);
+	private:
+		std::string type;
+	public:
+		Weapon(std::string type);
+		~Weapon();
+		const std::string &getType() const;
+		void setType(std::string type);
 };
 
 #endif

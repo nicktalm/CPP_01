@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 16:00:52 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 16:51:12 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/24 16:29:00 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 # include "Weapon.hpp"
 
 class HumanB {
-private:
-	std::string name;
-	Weapon *weapon;
-public:
-	HumanB(std::string name);
-	~HumanB();
-	void attack();
-	void setWeapon(Weapon &weapon);
+	private:
+		std::string name;
+		Weapon *weapon;
+	public:
+		HumanB(std::string name);
+		~HumanB();
+		void attack();
+		void setWeapon(Weapon &weapon);
 };
 
 #endif
