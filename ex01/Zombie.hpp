@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:43:41 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/19 11:07:52 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/24 13:11:40 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@
 
 class Zombie
 {
-private:
-	std::string	name;
-public:
-	Zombie(){};
-	~Zombie();
-	Zombie*	zombieHorde( int N, std::string name );
-	void	announce(void);
-	int		index;
+	private:
+		std::string	name;
+	public:
+		Zombie(){};
+		~Zombie();
+		void	announce(void);
+		int		index;
+		void	setName(std::string name);
 };
+	Zombie*	zombieHorde( int N, std::string name );
 
 #endif

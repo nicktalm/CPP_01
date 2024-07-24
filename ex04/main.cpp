@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 11:36:25 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/16 15:51:40 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/24 13:25:05 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	replace(std::string filename, std::string s1, std::string s2)
 		}
 		outFile << line.substr(start_pos) << std::endl;
 	}
-	outFile.close();
+	inFile.close();
 	outFile.close();
 	return (0);
 }
