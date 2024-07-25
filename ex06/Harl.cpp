@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 16:40:49 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/23 16:26:51 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/25 12:45:44 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,20 @@ void Harl::complain(std::string level)
 			break;
 		}
 	}
-	if (levelIndex != -1)
+	switch (levelIndex)
 	{
-		for (int i = levelIndex; i < 4; i++)
-			(this->*functions[i])();
+		case 0:
+			(this->*functions[0])();
+		case 1:
+			(this->*functions[1])();
+		case 2:
+			(this->*functions[2])();
+		case 3:
+			(this->*functions[3])();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
-	else
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }
 
 void Harl::debug(void)
