@@ -6,14 +6,15 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 11:36:25 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/07/24 13:25:05 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/07/30 12:28:06 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
-int	replace(std::string filename, std::string s1, std::string s2)
+int replace(std::string filename, std::string s1, std::string s2)
 {
 	std::ifstream inFile(filename);
 	if (!inFile)
@@ -21,30 +22,39 @@ int	replace(std::string filename, std::string s1, std::string s2)
 		std::cerr << "Unable to open file: " << filename << std::endl;
 		return (1);
 	}
+	std::string line;
+	if (inFile.peek() == std::ifstream::traits_type::eof())
+	{
+		std::cerr << "Input file is empty: " << filename << std::endl;
+		return 1;
+	}
 	std::ofstream outFile(filename + ".replace");
 	if (!outFile)
 	{
 		std::cerr << "Unable to create output file: " << filename + ".replace" << std::endl;
 		return (1);
 	}
-	std::string line;
+	bool firstLine = true;
 	while (std::getline(inFile, line))
 	{
+		if (!firstLine)
+			outFile << std::endl;
+		firstLine = false;
 		int start_pos = 0;
 		int pos = 0;
-		std::string n_pos;
 		while ((pos = line.find(s1, start_pos)) != std::string::npos)
 		{
 			outFile << line.substr(start_pos, pos - start_pos);
-			outFile << s2,
-			start_pos= pos + s1.length();
+			outFile << s2;
+			start_pos = pos + s1.length();
 		}
-		outFile << line.substr(start_pos) << std::endl;
+		outFile << line.substr(start_pos);
 	}
 	inFile.close();
 	outFile.close();
 	return (0);
 }
+
 
 int	main(int argc, char **argv)
 {
